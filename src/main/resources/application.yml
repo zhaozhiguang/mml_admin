@@ -1,0 +1,54 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/admin?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+    username: root
+    password: 123456
+    data-username: root
+    data-password: 123456
+    schema-username: root
+    schema-password: 123456
+    data: classpath:db/data.sql
+    schema: classpath:db/schema.sql
+    initialization-mode: always
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+      web-stat-filter:
+        enabled: true
+        urlPattern: /*
+        exclusions: "*.js,*.jpg,*.png,*.gif,*.ico,*.css,/druid/*"
+        profile-enable: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: druid
+        login-password: druid
+        reset-enable: true
+      aop-patterns: "com.zhaozhiguang.component.*"
+logging:
+  level:
+    root: info
+  file:
+    max-history: 7
+    max-size: 10MB
+  path: debug
