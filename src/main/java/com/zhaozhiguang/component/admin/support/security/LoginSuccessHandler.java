@@ -1,8 +1,7 @@
-package com.zhaozhiguang.component.admin.support;
+package com.zhaozhiguang.component.admin.support.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zhaozhiguang.component.admin.common.Result;
-import com.zhaozhiguang.component.admin.entity.AdminAuthenticationToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;

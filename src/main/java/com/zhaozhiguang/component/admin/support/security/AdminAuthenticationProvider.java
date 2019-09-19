@@ -1,4 +1,4 @@
-package com.zhaozhiguang.component.admin.support;
+package com.zhaozhiguang.component.admin.support.security;
 
 import com.zhaozhiguang.component.admin.entity.AdminAuthenticationToken;
 import com.zhaozhiguang.component.admin.service.AdminService;

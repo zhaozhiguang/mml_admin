@@ -52,3 +52,13 @@ logging:
     max-history: 7
     max-size: 10MB
   path: debug
+captcha:
+  kaptcha.textproducer.font.size: 35
+  kaptcha.border: 'no'
+  kaptcha.image.width: 125
+  kaptcha.image.height: 50
+  kaptcha.textproducer.char.length: 4
+  kaptcha.textproducer.char.space: 4
+  kaptcha.obscurificator.impl: com.google.code.kaptcha.impl.ShadowGimpy
+  kaptcha.noise.impl: com.google.code.kaptcha.impl.NoNoise
+  kaptcha.textproducer.font.names: '宋体,楷体,微软雅黑'

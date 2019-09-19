@@ -1,4 +1,4 @@
-package com.zhaozhiguang.component.admin.support;
+package com.zhaozhiguang.component.admin.support.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zhaozhiguang.component.admin.common.Result;

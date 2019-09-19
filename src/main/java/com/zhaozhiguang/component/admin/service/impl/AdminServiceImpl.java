@@ -26,6 +26,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public SysUser loadByUserName(String userName) {
-        return sysUserRepository.findByUserName(userName);
+        SysUser byUser = sysUserRepository.findByUserName(userName);
+        if (byUser == null) return null;
+
+
+        return byUser;
     }
 }

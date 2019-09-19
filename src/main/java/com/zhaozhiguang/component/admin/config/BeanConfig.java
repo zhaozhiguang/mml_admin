@@ -1,5 +1,6 @@
 package com.zhaozhiguang.component.admin.config;
 
+import com.zhaozhiguang.component.admin.util.DateUtil;
 import org.hibernate.validator.HibernateValidator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +10,7 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 @Configuration
-public class ValidatorConfig {
+public class BeanConfig {
 
     /**
      * hibernate-validator校验
@@ -23,6 +24,11 @@ public class ValidatorConfig {
                 .buildValidatorFactory();
         Validator validator = validatorFactory.getValidator();
         return validator;
+    }
+
+    @Bean
+    public DateUtil dateUtil(){
+        return new DateUtil();
     }
 
 }
