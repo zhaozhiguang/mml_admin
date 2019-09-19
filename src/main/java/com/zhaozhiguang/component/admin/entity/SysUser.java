@@ -154,5 +154,19 @@ public class SysUser implements UserDetails {
          */
         CredentialsNonExpired
     }
+
+    /**
+     * 生成用户对象
+     * @param userName
+     * @param passWord
+     * @return
+     */
+    public static SysUser of(String userName, String passWord) {
+        SysUser sysUser = new SysUser();
+        sysUser.setUserName(userName);
+        sysUser.setPassWord(passWord);
+        return sysUser;
+    }
+
 }
 
